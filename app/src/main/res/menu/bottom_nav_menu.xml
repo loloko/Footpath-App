@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_explore_24dp"
+        android:title="@string/explore" />
+
+    <item
+        android:id="@+id/navigation_record"
+        android:icon="@drawable/ic_record"
+        android:title="@string/record" />
+
+    <item
+        android:id="@+id/navigation_my_tracks"
+        android:icon="@drawable/ic_my_track"
+        android:title="@string/history" />
+
+</menu>

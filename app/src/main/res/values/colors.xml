@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorPrimaryLight">#FFE0B2</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="ic_launcher_background">#FF9800</color>
+
+    <color name="text_black">#000000</color>
+    <color name="text_white">#ffffff</color>
+
+    <color name="red">#ff0303</color>
+    <color name="facebook_button">#485a96</color>
+
+
+    <color name="grey">#808080</color>
+
+    <!-- Screens background color-->
+    <color name="intro1">#CCEDC5</color>
+    <color name="intro2">#C5D8ED</color>
+    <color name="intro3">#B2DFDB</color>
+    <color name="introSubtitle">#636363</color>
+
+
+    <color name="my_track">#99FF9800</color>
+    <color name="offline">#99F44336</color>
+
+    <!-- Difficulty color-->
+    <color name="easy">#43A047</color>
+    <color name="moderate">#FFB300</color>
+    <color name="difficult">#F4511E</color>
+
+    <color name="black_shadown">#5C000000</color>
+
+    <!--    <color name="background">#59FFFFFF</color>-->
+</resources>

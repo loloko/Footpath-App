@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".activity.RecordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/timer"
+            android:textAlignment="center"
+            android:textColor="@color/text_black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/time_zero"
+            android:textAlignment="center"
+            android:textColor="@color/text_black"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:paddingTop="1dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:textAlignment="center"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/min_km"
+                android:textAlignment="center"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_zero"
+                android:textAlignment="center"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_record"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableBottom="@drawable/ic_running_32dp"
+                android:drawablePadding="4dp"
+                android:onClick="btExerciseTypeClick"
+                android:text="@string/exercise_type"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableBottom="@drawable/ic_point"
+                android:drawablePadding="4dp"
+                android:onClick="btTrackTypeClick"
+                android:text="@string/track_type"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+            <Button
+                android:id="@+id/bt_start"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bt_type2_shadow"
+                android:onClick="btStartClick"
+                android:text="@string/start"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt_stop"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bt_type1_shadow"
+                android:onClick="btStopClick"
+                android:text="@string/stop"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bt_resume"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/bt_type2_shadow"
+                android:onClick="btResumeClick"
+                android:text="@string/resume"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bt_finish"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bt_type1_shadow"
+                android:onClick="btFinishClick"
+                android:text="@string/finish"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+
+

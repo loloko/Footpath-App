@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/choose_rate"
+        android:textColor="@color/text_black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rating_bar_dialog"
+        style="@style/Widget.AppCompat.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:numStars="5" />
+
+    <Button
+        android:id="@+id/bt_done_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_6dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/done"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>
